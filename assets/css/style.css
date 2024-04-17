@@ -93,6 +93,7 @@ section {
 }
 .icon-menu {
       background-color: inherit;
+
 }
 .header__container {
     display: flex;
@@ -1340,6 +1341,7 @@ button#button-for-the-section-our-films {
         position: relative;
         z-index: 5;
     }
+    .menu__body>.icon-menu {display: none;}
     .icon-menu span,
     .icon-menu::before,
     .icon-menu::after {
