@@ -14,46 +14,63 @@
    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"> 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">  
   <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
   <script src="./dist/app.js"></script>
 </head>
 <body>
 <div class="wrapper">
-<header class="header">
-    <div class="header__container">
-        <a href="#" class="header__logo">
-            <img src="assets/img/logo/logg.svg" alt="logo">
-        </a>
-        <nav class="header__menu menu">
-            <div class="menu__body">
-                <button class="menu__icon icon-menu" type="button"></button> <!-- Добавлен класс icon-menu -->
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Головна</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Проєкт</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Контакти</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Процес</a>
-                    </li>
-                </ul>
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <img src="assets/img/logo/logg.svg" alt="logo">
+            </a>
+            <nav class="header__menu menu">
+                <div class="menu__body">
+                    <button class="menu__icon icon-menu" type="button"></button>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="index.html" class="menu__link">Головна</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link" id="menu__project">Проєкт</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link" id="menu__contat">Контакти</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link" id="menu__process">Процес</a>
+                        </li>
+                    </ul>
+                        <div class="menu-item__icon">
+                            <ul class="list social-media">
+                                <li class="list-item">
+                                    <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="list-link"><i class="ri-pinterest-line"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </nav>
+            <div class="header__cart cart-header">
+                <span class="cart-header__text" id="cart-header__text">Проєкти</span>
+                <span class="cart-header__quantity" id="cart-header__quantity" title="Проєкти">12</span>
             </div>
-        </nav>
-        <div class="header__cart cart-header">
-            <span class="cart-header__text" id="cart-header__text">Проєкти</span>
-            <span class="cart-header__quantity" id="cart-header__quantity" title="Проєкти">12</span>
+            <a href="#" class="header__button button">В команду</a>
+            <div class="menu__icon icon-menu" type="button">
+                <span></span>
+            </div>
         </div>
-        <a href="#" class="header__button button">В команду</a>
-        <div class="menu__icon icon-menu" type="button"> <!-- Добавлен класс icon-menu -->
-            <span></span>
-        </div>
-    </div>
-</header>
+    </header>
 
 
 <main class="page">
@@ -522,6 +539,16 @@ document.getElementById('image-project3').addEventListener('click', function() {
 });
 document.getElementById('image-project4').addEventListener('click', function() {
     var block = document.querySelector('.block__projects4');
+    block.classList.add('block-outlined');
+    block.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function() {
+        block.classList.remove('block-outlined');
+    }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
+});
+
+
+document.getElementById('menu__process').addEventListener('click', function() {
+    var block = document.querySelector('.section__classes');
     block.classList.add('block-outlined');
     block.scrollIntoView({ behavior: 'smooth' });
     setTimeout(function() {
