@@ -9,7 +9,7 @@
   --bg-color: #141218;
   --color-text-header: #00FFFF;
   --bg-color-2: #B2FFFF;
-/*  --bg-color-3: #4D4D5C;*/
+  --bg-color-3: #4D4D5C;
   --bg-color-3: #686965;
 }
 /*BUTTON PROJECTS*/
@@ -74,7 +74,7 @@ button::after{
   
   background-color: var(--bg-color);
   color:transparent;
-  transition: transform .4s ease-out;
+  transition: transform 1s ease-out;
   transform: translate(0, -90%) rotate(0deg)
 }
 
@@ -204,7 +204,7 @@ button.animate-in-header::before {
     transform: translate(0, -66.666%);
   }
 }
-/*BUTTON MORE*/
+/*BUTTON MORE in PROJECTS*/
 button#button-our-projects-more {
   position: relative; 
   left: 50%; 
@@ -219,7 +219,7 @@ button#button-our-projects-more {
   font-size: 30px;  
   color: var(--text-color);
   background-color: var(--bg-color-3);
-  box-shadow: var(--color-text-header) 2px 2px 22px;
+  box-shadow: var(--color-text-header) 12px 12px 32px;
   border-radius: 4px; 
   z-index: 1;  
   overflow: hidden;   
